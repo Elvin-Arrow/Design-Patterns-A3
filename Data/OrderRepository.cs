@@ -8,6 +8,7 @@ namespace Design_Pattern_Assignment_3.Data
         FalafilPatty,
         GrilledChicken,
         MushroomChicken,
+        MeatCheese,
         Combo1,
         Combo2,
     }
@@ -61,6 +62,10 @@ namespace Design_Pattern_Assignment_3.Data
 
                 case FoodItems.MushroomChicken:
                     _meal = _mealBuilder.prepareNonVegMeal("Mushroom Chicken burger", 450.0F);
+                    break;
+
+                case FoodItems.MeatCheese:
+                    _meal = _mealBuilder.prepareBeafMeal("Meat Chease Burger", 600.0F);
                     break;
 
                 case FoodItems.Combo1:

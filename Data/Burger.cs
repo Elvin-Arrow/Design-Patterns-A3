@@ -52,4 +52,11 @@ namespace Design_Pattern_Assignment_3.Data
         {
         }
     }
+
+    public class BeafBurger : Burger
+    {
+        public BeafBurger(string name, float price) : base(name, price)
+        {
+        }
+    }
 }

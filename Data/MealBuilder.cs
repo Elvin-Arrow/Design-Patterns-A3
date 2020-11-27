@@ -22,6 +22,12 @@ namespace Design_Pattern_Assignment_3.Data
             return _meal;
         }
 
+        public Meal prepareBeafMeal(string name, float price)
+        {
+            _meal.addItem(new BeafBurger(name, price));
+            return _meal;
+        }
+
         public Meal prepareCombo(FoodItems combo, string burgerName, float price, Drinks drink, float drinkPrice)
         {
             switch (combo)
