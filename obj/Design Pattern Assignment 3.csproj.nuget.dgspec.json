@@ -1,0 +1,63 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/arrow/Foundary/C#/Blazor_Projects/Design Pattern Assignment 3/Design Pattern Assignment 3.csproj": {}
+  },
+  "projects": {
+    "/home/arrow/Foundary/C#/Blazor_Projects/Design Pattern Assignment 3/Design Pattern Assignment 3.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/arrow/Foundary/C#/Blazor_Projects/Design Pattern Assignment 3/Design Pattern Assignment 3.csproj",
+        "projectName": "Design Pattern Assignment 3",
+        "projectPath": "/home/arrow/Foundary/C#/Blazor_Projects/Design Pattern Assignment 3/Design Pattern Assignment 3.csproj",
+        "packagesPath": "/home/arrow/.nuget/packages/",
+        "outputPath": "/home/arrow/Foundary/C#/Blazor_Projects/Design Pattern Assignment 3/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/arrow/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "netcoreapp5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "netcoreapp5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

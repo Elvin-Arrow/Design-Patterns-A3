@@ -1,0 +1,168 @@
+@page "/"
+
+@using Design_Pattern_Assignment_3.Data
+
+@code {
+    private Meal _meal { get; set; }
+    private Order order = new Order();
+
+    private void addMealItem(FoodItems item)
+    {
+        _meal = order.addItem(item);
+
+    }
+}
+
+<div class="bg">
+    <h1 class="display-1">PayTo</h1>
+    <div class="mt-5"></div>
+    <h3>Welcome to the PayTo home to burger finess</h3>
+
+</div>
+
+
+<div class="mt-5"></div>
+
+<h2>Our offerings</h2>
+
+<div class="row">
+    <div class="col-md-3">
+        <div class="card" style="height: 500px;">
+            <img src="assets/images/burger_2.jpg" alt="Burger" class="card-img-top">
+            <div class="card-body">
+                <div class="card-title font-weight-bold">
+                    Lentil Burger
+                </div>
+                <div class="card-text">
+                    Our state of the art burgers for veggie lovers
+                </div>
+                <button class="btn btn-primary mt-5" @onclick="() => addMealItem(FoodItems.Lentil)">Order</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card" style="height: 500px;">
+            <img src="assets/images/burger_3.jpg" alt="Burger" class="card-img-top">
+            <div class="card-body">
+                <div class="card-title font-weight-bold">
+                    Falafel burger
+                </div>
+                <div class="card-text">
+                    Our state of the art burgers for meat lovers
+                </div>
+                <button class="btn btn-primary mt-5" @onclick="() => addMealItem(FoodItems.FalafilPatty)">Order</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card" style="height: 500px;">
+            <img src="assets/images/burger_1.jpeg" alt="Burger" class="card-img-top">
+            <div class="card-body">
+                <div class="card-title font-weight-bold">
+                    Grilled Chicken burger
+                </div>
+                <div class="card-text">
+                    A burger with grilled Chicken
+                </div>
+                <button class="btn btn-primary mt-5"
+                    @onclick="() => addMealItem(FoodItems.GrilledChicken)">Order</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card" style="height: 500px;">
+            <img src="assets/images/burger_4.jpg" alt="Burger" class="card-img-top">
+            <div class="card-body">
+                <div class="card-title font-weight-bold">
+                    Mushroom Chicken burger
+                </div>
+                <div class="card-text">
+                    A creamy delight
+                </div>
+                <button class="btn btn-primary mt-5"
+                    @onclick="() => addMealItem(FoodItems.MushroomChicken)">Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-5"></div>
+
+<h2>Combos</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card" style="height: 550px;">
+            <img src="assets/images/combo_1.jpg" alt="Burger" class="card-img-top">
+            <div class="card-body">
+                <div class="card-title font-weight-bold">
+                    Veggie Combo
+                </div>
+                <div class="card-text">
+                    Veggie burger along coke
+                </div>
+                <button class="btn btn-primary mt-4" @onclick="() => addMealItem(FoodItems.Combo1)">Order</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card" style="height: 550px;">
+            <img src="assets/images/combo_2.jpg" alt="Burger" class="card-img-top">
+            <div class="card-body">
+                <div class="card-title font-weight-bold">
+                    Chicken Combo
+                </div>
+                <div class="card-text">
+                    Chick burger along with pepsi
+                </div>
+                <button class="btn btn-primary mt-4" @onclick="() => addMealItem(FoodItems.Combo2)">Order</button>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="mt-5"></div>
+
+<h1>Your order</h1>
+
+@if (_meal == null)
+{
+    <p>You are yet to order anything...</p>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Item No.</th>
+                <th>Item</th>
+                <th>Packing</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @{
+                int count = 1;
+            }
+            @foreach (var item in _meal.getMealItems())
+            {
+
+                <tr>
+                    <td>@count</td>
+                    <td>@item.name()</td>
+                    <td>@item.packing().pack()</td>
+                    <td>@item.price()</td>
+                </tr>
+                count++;
+            }
+
+        </tbody>
+    </table>
+}
